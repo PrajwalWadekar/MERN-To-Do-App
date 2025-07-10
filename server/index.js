@@ -56,20 +56,7 @@ app.put("/toggle/:taskId", (req, res) => {
     .catch(err => res.status(500).json({ error: "Toggle failed", err }));
 });
 
-app.put("/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { done } = req.body;
 
-    const updatedTask = await Todo.findByIdAndUpdate(id, { done }, { new: true });
-
-    if (!updatedTask) return res.status(404).send("Task not found");
-
-    res.status(200).json(updatedTask);
-  } catch (error) {
-    res.status(500).json({ error: "Server error" });
-  }
-});
 
 
 
