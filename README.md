@@ -107,7 +107,7 @@ Check out the live version of the app:
 
 ## 📸 Screenshot
 
-![App Screenshot](./output.png)
+![App Screenshot](https://github.com/PrajwalWadekar/MERN-To-Do-App/blob/main/Output.png)
 
 
 
