@@ -1,42 +1,131 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  margin-top: 40px;
+  background-color: #1e1e1e;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  max-width: 600px;
+  width: 90%;
+}
+
+h2 {
   text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+input[type="text"] {
+  width: 75%;
+  padding: 8px;
+  font-size: 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2c2c2c;
+  color: #fff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"]::placeholder {
+  color: #aaa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  padding: 8px 12px;
+  margin-right: 8px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  height: 34px;
 }
 
-.card {
-  padding: 2em;
+
+button:hover {
+  background: #2e70c0;
 }
 
-.read-the-docs {
-  color: #888;
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
 }
+
+li {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.task-left .done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #b2cfff;
+  transition: transform 0.2s ease;
+  margin-right: 5px;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #4a90e2;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #ccc;
+}
+

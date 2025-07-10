@@ -1,7 +1,7 @@
 # MERN Todo App
 
 A simple Todo List application built with the MERN stack (MongoDB, Express, React, Node.js).  
-This project allows users to add, update, delete, and toggle tasks as done or pending.
+This project allows users to add, update, delete, and toggle tasks as done or pending (CRUD Operations).
 
 ---
 
@@ -41,7 +41,7 @@ README.md     # This file
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/mern-todo-app.git
+git clone https://github.com/PrajwalWadekar/MERN-To-Do-App.git
 cd mern-todo-app
 ```
 
@@ -55,7 +55,7 @@ npm install
 3. Create `.env` file inside `server` folder with:
 
 ```env
-MONGO_URI=mongodb://127.0.0.1:27017/mytodos
+MONGO_URI=mongodb://127.0.0.1:27017/database_name
 PORT=3000
 ```
 
@@ -75,7 +75,7 @@ npm install
 npm start
 ```
 
-6. Open [http://localhost:3000](http://localhost:3000) in your browser to use the app.
+6. Open [http://localhost:3000] in your browser to use the app.
 
 ---
 
