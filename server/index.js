@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const TodoModel = require('./models/Todo');
 const cors = require('cors');
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
@@ -56,6 +57,6 @@ app.put("/toggle/:taskId", (req, res) => {
 });
 
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
-});
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+

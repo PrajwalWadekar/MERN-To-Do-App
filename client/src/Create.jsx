@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {
-  BsCircle,
-  BsCheckCircle
-} from "react-icons/bs";
-import './App.css'; 
+import { BsCircle, BsCheckCircle } from "react-icons/bs";
+import './App.css';
 
 const Create = () => {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
+
   const fetchTasks = () => {
-    axios.get("https://mern-to-do-app-9o8s.onrender.com/get")
+    axios.get(`${API_BASE_URL}/get`)
       .then((res) => setTasks(res.data))
       .catch(err => console.error("Error fetching tasks:", err));
   };
@@ -22,7 +21,7 @@ const Create = () => {
 
   const handleAdd = () => {
     if (!task.trim()) return;
-    axios.post("https://mern-to-do-app-9o8s.onrender.com/add", { task })
+    axios.post(`${API_BASE_URL}/add`, { task })
       .then(() => {
         setTask("");
         fetchTasks();
@@ -31,7 +30,7 @@ const Create = () => {
   };
 
   const handleDelete = (taskId) => {
-    axios.delete(`https://mern-to-do-app-9o8s.onrender.com/delete/${taskId}`)
+    axios.delete(`${API_BASE_URL}/delete/${taskId}`)
       .then(fetchTasks)
       .catch(err => console.error("Error deleting task:", err));
   };
@@ -39,21 +38,19 @@ const Create = () => {
   const handleUpdate = (taskId) => {
     const newTask = prompt("Enter updated task:");
     if (!newTask) return;
-    axios.put(`https://mern-to-do-app-9o8s.onrender.com/update/${taskId}`, { task: newTask })
+    axios.put(`${API_BASE_URL}/update/${taskId}`, { task: newTask })
       .then(fetchTasks)
       .catch(err => console.error("Error updating task:", err));
   };
 
   const toggleDone = (taskId, currentStatus) => {
-    axios.put(`https://mern-to-do-app-9o8s.onrender.com/${taskId}`, { done: !currentStatus })
+    axios.put(`${API_BASE_URL}/${taskId}`, { done: !currentStatus })
       .then(fetchTasks)
       .catch(err => console.error("Error toggling task status:", err));
   };
 
   return (
     <div className="">
-      {/* <h2>My Todo List</h2> */}
-
       <div className="input-row">
         <input
           type="text"
