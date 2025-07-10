@@ -7,7 +7,8 @@ const Create = () => {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
-  const API_BASE_URL = process.env.REACT_APP_API_URL;
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://mern-to-do-app-9o8s.onrender.com";
+
 
   const fetchTasks = () => {
     axios.get(`${API_BASE_URL}/get`)
