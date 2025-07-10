@@ -1,7 +1,7 @@
 # MERN Todo App
 
 A simple Todo List application built with the MERN stack (MongoDB, Express, React, Node.js).  
-This project allows users to add, update, delete, and toggle tasks as done or pending.
+This project allows users to add, update, delete, and toggle tasks as done or pending (CRUD Operations).
 
 ---
 
