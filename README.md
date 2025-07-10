@@ -98,3 +98,17 @@ npm start
 
 ---
 
+## 🌐 Live Demo
+
+Check out the live version of the app:  
+🔗 [MERN Todo App Live](https://mern-to-do-app-frontend.vercel.app)
+
+---
+
+## 📸 Screenshot
+
+![App Screenshot](./output.png)
+
+
+
+
