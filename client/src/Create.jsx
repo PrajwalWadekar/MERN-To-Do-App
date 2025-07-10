@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BsCircle, BsCheckCircle } from "react-icons/bs";
 import './App.css';
+require('dotenv').config();
 
 const Create = () => {
   const [task, setTask] = useState("");
