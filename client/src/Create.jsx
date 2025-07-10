@@ -44,11 +44,13 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || "https://mern-to-do-app-9o8
       .catch(err => console.error("Error updating task:", err));
   };
 
-  const toggleDone = (taskId, currentStatus) => {
-    axios.put(`${API_BASE_URL}/toggle/${taskId}`, { done: !currentStatus })
-      .then(fetchTasks)
-      .catch(err => console.error("Error toggling task status:", err));
-  };
+ const toggleDone = (taskId, currentStatus) => {
+  axios.put(`${API_BASE_URL}/mark-done/${taskId}`, {
+    done: !currentStatus
+  })
+  .then(fetchTasks)
+  .catch(err => console.error("Error toggling task status:", err));
+};
 
   return (
     <div className="">
