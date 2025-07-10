@@ -11,7 +11,7 @@ const Create = () => {
   const [tasks, setTasks] = useState([]);
 
   const fetchTasks = () => {
-    axios.get("http://localhost:3000/get")
+    axios.get("https://mern-to-do-app-9o8s.onrender.com/get")
       .then((res) => setTasks(res.data))
       .catch(err => console.error("Error fetching tasks:", err));
   };
@@ -22,7 +22,7 @@ const Create = () => {
 
   const handleAdd = () => {
     if (!task.trim()) return;
-    axios.post("http://localhost:3000/add", { task })
+    axios.post("https://mern-to-do-app-9o8s.onrender.com/add", { task })
       .then(() => {
         setTask("");
         fetchTasks();
@@ -31,7 +31,7 @@ const Create = () => {
   };
 
   const handleDelete = (taskId) => {
-    axios.delete(`http://localhost:3000/delete/${taskId}`)
+    axios.delete(`https://mern-to-do-app-9o8s.onrender.com/delete/${taskId}`)
       .then(fetchTasks)
       .catch(err => console.error("Error deleting task:", err));
   };
@@ -39,13 +39,13 @@ const Create = () => {
   const handleUpdate = (taskId) => {
     const newTask = prompt("Enter updated task:");
     if (!newTask) return;
-    axios.put(`http://localhost:3000/update/${taskId}`, { task: newTask })
+    axios.put(`https://mern-to-do-app-9o8s.onrender.com/update/${taskId}`, { task: newTask })
       .then(fetchTasks)
       .catch(err => console.error("Error updating task:", err));
   };
 
   const toggleDone = (taskId, currentStatus) => {
-    axios.put(`http://localhost:3000/toggle/${taskId}`, { done: !currentStatus })
+    axios.put(`https://mern-to-do-app-9o8s.onrender.com/${taskId}`, { done: !currentStatus })
       .then(fetchTasks)
       .catch(err => console.error("Error toggling task status:", err));
   };
