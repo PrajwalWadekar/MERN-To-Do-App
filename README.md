@@ -101,7 +101,7 @@ npm start
 ## 🌐 Live Demo
 
 Check out the live version of the app:  
-🔗 [MERN Todo App Live]([https://mern-to-do-a62knsbxc-prajwal-wadekars-projects.vercel.app/](https://mern-to-do-app-fyoo.vercel.app/))
+🔗 [MERN Todo App Live]([https://mern-to-do-app-fyoo.vercel.app/])
 
 ---
 
