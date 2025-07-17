@@ -5,6 +5,13 @@ This project allows users to add, update, delete, and toggle tasks as done or pe
 
 ---
 
+## 🌐 Live Demo
+
+Check out the live version of the app:  
+🔗 [MERN Todo App Live](https://mern-to-do-app-fyoo.vercel.app/)
+
+---
+
 ## Features
 
 - Add new tasks  
@@ -98,12 +105,6 @@ npm start
 
 ---
 
-## 🌐 Live Demo
-
-Check out the live version of the app:  
-🔗 [MERN Todo App Live](https://mern-to-do-app-fyoo.vercel.app/)
-
----
 
 ## 📸 Screenshot
 
